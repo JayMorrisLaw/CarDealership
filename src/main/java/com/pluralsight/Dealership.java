@@ -33,52 +33,53 @@ public class Dealership {
         return results;
     }
     public ArrayList<Vehicle> searchByMakeModel(String make, String model) {
-        ArrayList<Vehicle> MakeModel = new ArrayList<>();
+        ArrayList<Vehicle> makeModel = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
             if (vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model)){
-                MakeModel.add(vehicle);
+                makeModel.add(vehicle);
             }
         }
-        return MakeModel;
+        return makeModel;
     }
     public ArrayList<Vehicle> searchByYear(int min, int max) {
-        ArrayList<Vehicle> YearSearch = new ArrayList<>();
+        ArrayList<Vehicle> yearSearch = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
             if (vehicle.getYear() >= min && vehicle.getYear() <= max){
-                YearSearch.add(vehicle);
+                yearSearch.add(vehicle);
             }
         }
-        return YearSearch;
+        return yearSearch;
     }
     public ArrayList<Vehicle> searchByColor(String color) {
-        ArrayList<Vehicle> ColorSearch = new ArrayList<>();
+        ArrayList<Vehicle> colorSearch = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
             if (vehicle.getColor().equalsIgnoreCase(color)){
-                ColorSearch.add(vehicle);
+                colorSearch.add(vehicle);
             }
         }
-        return ColorSearch;
+        return colorSearch;
     }
     public ArrayList<Vehicle> searchByMileage(int min, int max) {
-        ArrayList<Vehicle> MileSearch = new ArrayList<>();
+        ArrayList<Vehicle> mileSearch = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
             if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max){
-                MileSearch.add(vehicle);
+                mileSearch.add(vehicle);
             }
         }
-        return MileSearch;
+        return mileSearch;
     }
     public ArrayList<Vehicle> searchByType(String type) {
-        ArrayList<Vehicle> TypeSearch = new ArrayList<>();
+        ArrayList<Vehicle> typeSearch = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
             if (vehicle.getVehicleType().equalsIgnoreCase(type)){
-                TypeSearch.add(vehicle);
+                typeSearch.add(vehicle);
             }
         }
-        return TypeSearch;
+        return typeSearch;
     }
 
     public void removeVehicle(Vehicle vehicle){
+        inventory.remove(vehicle);
 
     }
 
