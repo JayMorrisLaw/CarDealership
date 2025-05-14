@@ -82,6 +82,16 @@ public class Dealership {
         inventory.remove(vehicle);
 
     }
+    public Vehicle findVehicle(int year, String make, String model) {
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getYear() == year &&
+                    vehicle.getMake().equalsIgnoreCase(make) &&
+                    vehicle.getModel().equalsIgnoreCase(model)) {
+                return vehicle;
+            }
+        }
+        return null;
+    }
 
 
 
